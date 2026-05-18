@@ -73,7 +73,7 @@ svg {
   grid-template-columns: minmax(420px, max-content) 1fr max-content;
   gap: 18px;
   align-items: center;
-  min-height: 82px;
+  min-height: 90px;
   padding: 12px 34px;
   border-bottom: 1px solid rgba(221, 226, 223, 0.85);
   background: rgba(246, 244, 239, 0.88);
@@ -120,33 +120,16 @@ svg {
 }
 
 .ltu-brand {
-  color: var(--ltu-black);
-}
-
-.ltu-brand .brand-text strong {
-  font-size: 18px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.ltu-brand .brand-text small {
-  color: var(--ltu-black);
-  font-weight: 850;
-  text-transform: uppercase;
-}
-
-.ltu-mark {
-  width: 44px;
-  height: 44px;
   flex: 0 0 auto;
 }
 
-.ltu-mark path:first-child {
-  fill: var(--ltu-red);
-}
-
-.ltu-mark path:last-child {
-  fill: #fff;
+.ltu-logo {
+  display: block;
+  width: 68px;
+  height: 68px;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: 0 8px 18px rgba(226, 35, 26, 0.14);
 }
 
 .brand-divider {
@@ -156,29 +139,19 @@ svg {
 }
 
 .platform-brand {
-  max-width: 340px;
+  max-width: 440px;
 }
 
-.platform-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
+.scp-logo {
+  display: block;
+  width: 96px;
+  height: 52px;
   flex: 0 0 auto;
-  place-items: center;
   border: 1px solid rgba(22, 121, 111, 0.28);
   border-radius: 8px;
-  background: var(--teal-soft);
+  object-fit: cover;
+  object-position: center;
   box-shadow: 0 8px 18px rgba(22, 121, 111, 0.12);
-}
-
-.platform-mark svg {
-  width: 30px;
-  height: 30px;
-  fill: none;
-  stroke: var(--teal-dark);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
 }
 
 .top-nav {
@@ -770,7 +743,7 @@ td {
   }
 
   .platform-brand {
-    max-width: 280px;
+    max-width: 360px;
   }
 }
 
@@ -793,19 +766,14 @@ td {
     max-width: min(62vw, 320px);
   }
 
-  .platform-mark {
-    width: 34px;
-    height: 34px;
+  .scp-logo {
+    width: 74px;
+    height: 42px;
   }
 
-  .platform-mark svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .ltu-mark {
-    width: 36px;
-    height: 36px;
+  .ltu-logo {
+    width: 52px;
+    height: 52px;
   }
 
   .brand-text strong {
