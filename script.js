@@ -145,14 +145,20 @@ function getConfig() {
   let blockSizes = [];
 
   if (needsBlock(method)) {
-    blockSizes = [...elements.blockSizes].map((input) => Number.parseInt(input.value, 10));
-    if (blockSizes.length !== 3 || blockSizes.some((size) => !Number.isInteger(size) || size < 1)) {
-      errors.push("Enter exactly 3 positive block sizes.");
+    const enteredBlockSizes = [...elements.blockSizes].map((input) => input.value.trim()).filter(Boolean);
+    blockSizes = enteredBlockSizes.map((value) => Number(value));
+
+    if (!enteredBlockSizes.length) {
+      errors.push("Enter at least 1 block size. You can use 1, 2, or 3 block-size options.");
+    }
+
+    if (blockSizes.some((size) => !Number.isInteger(size) || size < 1)) {
+      errors.push("Block sizes must be positive integers.");
     }
 
     const uniqueSizes = new Set(blockSizes);
-    if (uniqueSizes.size !== 3) {
-      errors.push("The 3 block sizes should be different.");
+    if (uniqueSizes.size !== blockSizes.length) {
+      errors.push("Entered block sizes should be different.");
     }
 
     const invalidSizes = blockSizes.filter((size) => Number.isInteger(size) && ratioSum > 0 && size % ratioSum !== 0);

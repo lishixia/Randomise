@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RCT Randomization Tool</title>
-    <link rel="stylesheet" href="styles.css?v=rct-scp-logo-5" />
+    <link rel="stylesheet" href="styles.css?v=rct-block-options-6" />
   </head>
   <body>
     <header class="topbar">
@@ -79,7 +79,7 @@
                 <input type="radio" name="method" value="block" />
                 <span>
                   <strong>Block Randomization</strong>
-                  <small>Uses 3 variable block sizes.</small>
+                  <small>Uses 1 to 3 block-size options.</small>
                 </span>
               </label>
               <label class="method-option">
@@ -93,7 +93,7 @@
                 <input type="radio" name="method" value="stratified-block" />
                 <span>
                   <strong>Stratified Block Randomization</strong>
-                  <small>Supports up to 4 variables and 3 block sizes.</small>
+                  <small>Supports up to 4 variables and 1 to 3 block-size options.</small>
                 </span>
               </label>
             </div>
@@ -132,22 +132,23 @@
           <section class="conditional-panel" id="block-panel">
             <div class="section-title">
               <h2>Block settings</h2>
-              <span>3 variable block sizes</span>
+              <span>enter 1, 2, or 3 block-size options</span>
             </div>
             <div class="form-grid three">
               <label>
-                Block size 1
+                Block size option 1
                 <input class="block-size" type="number" min="1" value="4" />
               </label>
               <label>
-                Block size 2
+                Block size option 2 optional
                 <input class="block-size" type="number" min="1" value="6" />
               </label>
               <label>
-                Block size 3
+                Block size option 3 optional
                 <input class="block-size" type="number" min="1" value="8" />
               </label>
             </div>
+            <p class="field-hint">Leave unused block-size options blank. Every entered size must be a multiple of the allocation-ratio total.</p>
           </section>
 
           <section class="conditional-panel" id="strata-panel">
@@ -281,6 +282,6 @@
     </main>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="script.js?v=rct-scp-logo-5"></script>
+    <script src="script.js?v=rct-block-options-6"></script>
   </body>
 </html>

@@ -5,9 +5,9 @@ A local static website for generating RCT allocation schedules.
 ## Supported Methods
 
 - Simple Randomization
-- Block Randomization with 3 variable block sizes
+- Block Randomization with 1 to 3 block-size options
 - Stratified Randomization with up to 4 stratification variables
-- Stratified Block Randomization with up to 4 stratification variables and 3 variable block sizes
+- Stratified Block Randomization with up to 4 stratification variables and 1 to 3 block-size options
 
 ## Usage
 
@@ -19,7 +19,7 @@ Open `index.html` directly in a browser.
 - Reproducible seeded randomization
 - Up to 4 stratification variables, with comma-separated levels for each variable
 - Editable sample size for each generated stratum
-- Block-size validation against the allocation-ratio total
+- Block-size validation against the allocation-ratio total; users may enter 1, 2, or 3 block-size options
 - Copyable results table and CSV export
 - Header branding for La Trobe University using `latrobe logo.png`, plus the Statistics Consultancy Platform image from `SCP logo.jpg`
 
